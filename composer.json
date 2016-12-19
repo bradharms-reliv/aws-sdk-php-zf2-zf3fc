@@ -1,5 +1,5 @@
 {
-    "name": "aws/aws-sdk-php-zf2",
+    "name": "reliv/aws-sdk-php-zf2-zf3fc",
     "description": "Zend Framework 2 Module that allows easy integration the AWS SDK for PHP",
     "type": "library",
     "license": "Apache",
