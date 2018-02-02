@@ -2,7 +2,7 @@
     "name": "reliv/aws-sdk-php-zf2-zf3fc",
     "description": "Zend Framework 2 Module that allows easy integration the AWS SDK for PHP",
     "type": "library",
-    "license": "Apache",
+    "license": "Apache-2.0",
     "keywords": ["aws", "zf2", "amazon", "zend", "s3", "dynamodb", "ec2", "cloudfront"],
     "require": {
         "php": ">=5.3.3",
