@@ -38,7 +38,9 @@ class AwsFactory implements FactoryInterface
     {
         // Instantiate the AWS SDK for PHP
         $config = $serviceLocator->get('Config');
-        $config = isset($config['aws']) ? $config['aws'] : array();
+        $config = isset($config['components']['rcm']['AwsComponent']['aws']) ?
+            $config['components']['rcm']['AwsComponent'] :
+            array();
         $aws    = Aws::factory($config);
 
         // Attach an event listener that will append the ZF2 version number in the user agent string

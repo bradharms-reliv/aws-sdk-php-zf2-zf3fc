@@ -46,10 +46,19 @@ class ModuleTest extends BaseModuleTest
     {
         // Create the module and service manager, and register the module
         $serviceManager = $this->createServiceManagerForTest();
-        $serviceManager->setService('config', array('aws' => array(
-            'key'    => 'your-aws-access-key-id',
-            'secret' => 'your-aws-secret-access-key',
-        )));
+        $serviceManager->setService(
+            'config',
+            array(
+                'components' => array(
+                    'rcm' => array(
+                        'AwsComponent' => array(
+                            'key'    => 'your-aws-access-key-id',
+                            'secret' => 'your-aws-secret-access-key',
+                        )
+                    )
+                )
+            )
+    );
 
         // Make sure the service manager received the service configuration from the module
         $services = $serviceManager->getRegisteredServices();
@@ -98,7 +107,15 @@ class ModuleTest extends BaseModuleTest
     {
         return array(
             array(array()),
-            array(array('aws' => array())),
+            array(
+                array(
+                    'components' => array(
+                        'rcm' => array(
+                            'AwsComponent' => array(),
+                        ),
+                    ),
+                ),
+            ),
         );
     }
 }
