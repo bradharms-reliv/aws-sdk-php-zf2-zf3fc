@@ -30,8 +30,12 @@ class DynamoDbSessionSaveHandlerFactoryTest extends BaseModuleTest
         $serviceManager     = $this->createServiceManagerForTest();
 
         $config = array(
-            'aws' => array(
-                'region' => 'us-east-1'
+            'components' => array(
+                'rcm' => array(
+                    'AwsComponent' => array(
+                        'region' => 'us-east-1',
+                    ),
+                ),
             ),
             'aws_zf2' => array(
                 'session' => array(

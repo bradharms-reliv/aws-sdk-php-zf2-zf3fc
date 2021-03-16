@@ -42,10 +42,14 @@ the following:
 <?php
 
 return array(
-    'aws' => array(
-        'key'    => '<your-aws-access-key-id>',
-        'secret' => '<your-aws-secret-access-key>',
-        'region' => 'us-west-2'
+    'components' => array(
+        'rcm' => array(
+            'AwsComponent' => array(
+                'key'    => '<your-aws-access-key-id>',
+                'secret' => '<your-aws-secret-access-key>',
+                'region' => 'us-west-2'
+            )
+        )
     )
 );
 ```
@@ -176,13 +180,13 @@ $filter->filter($files['my-upload']);
 ### Session Save Handlers
 
 Read the [session save handler section]
-(http://zf2.readthedocs.org/en/latest/modules/zend.session.save-handler.html) in
+(<http://zf2.readthedocs.org/en/latest/modules/zend.session.save-handler.html>) in
 the ZF2 documentation for more information.
 
 #### DynamoDB
 
 To follow the [ZF2 examples]
-(http://zf2.readthedocs.org/en/latest/modules/zend.session.save-handler.html),
+(<http://zf2.readthedocs.org/en/latest/modules/zend.session.save-handler.html>),
 the DynamoDB session save handler might be used like this:
 
 ```php
@@ -200,7 +204,7 @@ You will probably want to further configure the save handler, which you can do i
 `config/aws_zf2.local.php.dist` file into your project's `config/autoload` directory (without the `.dist` of course).
 
 See `config/aws_zf2.local.php.dist` and [the AWS session handler documentation]
-(http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.DynamoDb.Session.SessionHandler.html#_factory) for more
+(<http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.DynamoDb.Session.SessionHandler.html#_factory>) for more
 detailed configuration information.
 
 ## Related Modules
@@ -218,5 +222,7 @@ The following are some ZF2 modules that use the AWS SDK for PHP by including thi
 * [AWS on Packagist](https://packagist.org/packages/aws)
 * [License](http://aws.amazon.com/apache2.0/)
 * [ZF2 website](http://framework.zend.com)
+
 # aws-sdk-php-zf2-zf3fc
+
 # aws-sdk-php-zf2-zf3fc
