@@ -38,7 +38,7 @@ class AwsFactory implements FactoryInterface
     {
         // Instantiate the AWS SDK for PHP
         $config = $serviceLocator->get('Config');
-        $config = isset($config['components']['rcm']['AwsComponent']['aws']) ?
+        $config = isset($config['components']['rcm']['AwsComponent']) ?
             $config['components']['rcm']['AwsComponent'] :
             array();
         $aws    = Aws::factory($config);
